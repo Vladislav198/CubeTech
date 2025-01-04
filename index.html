@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeTech</title>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- swiper js cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- header section starts -->
+
+    <header class="header">
+
+        <a href="#" class="logo">  <img src ="images/server.png"> CubeTech</a>
+
+        <nav class="navbar">
+            <a href="#home">головна</a>
+            <a href="#products">продукція</a>
+            <a href="#featured">рекомендовані товари</a>
+            <a href="#contact">контакти</a>
+            <select class="language-select" id="language-select">
+                <option value="uk">Українська</option>
+                <option value="en">English</option>
+            </select>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" class="fas fa-heart"></a>
+        </div>
+
+        <form action="" class="search-form">
+            <input type="search" name="" id="search-box" placeholder="search here...">
+            <label class="fas fa-search"></label>
+        </form>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+
+        <div class="slides-container">
+            
+            <div class="slide active">
+                <div class="content">
+                    <span>нова святкова акція </span>
+                    <h3>СУПЕР ЗНИЖКА </h3>
+                    <p>asus vivobook go 15-це легкий та стильний ноутбук із 15.6-дюймовим дисплеєм, що забезпечує чітке зображення. оснащений сучасним процесором, який гарантує швидку та стабільну роботу, він підходить для навчання, роботи й розваг. завдяки ергономічній клавіатурі та тривалому часу автономної роботи, пристрій зручний в повсякденному використанні.</p>
+                    <button class="btn">
+                        <span>придбати </span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                
+                <div class="image">
+                    <img src="images/header1.png" alt="">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <span>нова святкова акція</span>
+                    <h3>СУПЕР ЗНИЖКА</h3>
+                    <p>PlayStation 5 (PS5) — це сучасна ігрова консоль від Sony, випущена в 2020 році. Вона забезпечує потужну графіку завдяки технології трасування променів, підтримку 4K-роздільної здатності, швидке завантаження завдяки SSD-накопичувачу, також інноваційний геймпад DualSense з адаптивними тригерами й тактильною віддачею. </p>
+                    <button class="btn">
+                        <span>придбати </span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <div class="image">
+                    <img src="images/header2.png" alt="">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="slide-next" onclick="next()" class="fas fa-angle-right"></div>
+        <div id="slide-prev" onclick="prev()" class="fas fa-angle-left"></div>
+
+    </section>
+
+ 
+
+    <section class="products" id="products">
+
+        <h1 class="heading"><span>остання</span> продукція</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img clas="image-1"src="images/product1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>планшет lenovo tab p12</h3>
+                    <div class="price">17 117 ₴</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        
+                        <span>(30)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product2.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Смартфон Xiaomi Redmi Note 13 8/256Gb Midnight Black</h3>
+                    <div class="price">7 999 ₴</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        
+                        <span>(40)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product3.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Квадрокоптер DJI Mini 3 Pro + пульт DJI RC</h3>
+                    <div class="price">35 499 ₴</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product4.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Ноутбук Dell XPS 13</h3>
+                    <div class="price">55 000 ₴</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        
+                        <span>(40)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product5.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Ігровий ПК ASUS ROG Strix G15</h3>
+                    <div class="price">72 000 ₴</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/product6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Монітор LG UltraGear 27GN950</h3>
+                    <div class="price">32 000 ₴</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                    <a href="#" class="btn"> <i class="far fa-heart"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <section class="featured" id="featured">
+
+        <h1 class="heading"><span>рекомендовані    </span>товари </h1>
+
+        <div class="swiper featured-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="images/recproduct1.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Механічна клавіатура Razer BlackWidow V3 Pro</h3>
+                        <div class="price">6 500 ₴</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            
+                        </div>
+                        <a href="#" class="btn">додати до кошика</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-50%</span>
+                    <div class="image">
+                        <img src="images/recproduct2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Миша Logitech MX Master 3</h3>
+                        <div class="price">200 ₴</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            
+                        </div>
+                        <a href="#" class="btn">додати до кошика</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    
+                    <div class="image">
+                        <img src="images/recproduct3.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Процесор Intel Core i9-13900K</h3>
+                        <div class="price">28 000 ₴</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">додати до кошика</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    
+                    <div class="image">
+                        <img src="images/recproduct4.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Відеокарта NVIDIA GeForce RTX 4080</h3>
+                        <div class="price">48 000 ₴</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">додати до кошика</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-25%</span>
+                    <div class="image">
+                        <img src="images/recproduct5.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>SSD Samsung 980 PRO 2TB</h3>
+                        <div class="price">8 200 ₴</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">додати до кошика</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide slide">
+                    <span class="discount">-20%</span>
+                    <div class="image">
+                        <img src="images/recproduct6.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Навушники HyperX Cloud Alpha Wireless</h3>
+                        <div class="price">2650 ₴</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn">додати до кошика</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+    </section>
+
+    <!-- featured product section ends -->
+
+    
+
+  
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading"><span>Зв'яжіться</span> з нами</h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/contact.png" alt="">
+            </div>
+
+            <form action="">
+                <h3>Заповніть</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Ваше ім'я">
+                    <input type="email" placeholder="Ваша ел.пошта">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Ваш номер">
+                    <input type="text" placeholder="Ваш товар">
+                </div>
+                <textarea placeholder="Ваше повідомлення" cols="30" rows="10"></textarea>
+                <input type="submit" value="відправити повідомлення" class="btn">
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>про нас</h3>
+                <p>TechnoShop — це ваш надійний партнер у світі сучасних технологій. Ми пропонуємо широкий вибір комп’ютерної техніки, гаджетів та аксесуарів від провідних виробників. Наші цінності — якість, доступність та клієнтоорієнтованість.</p>
+            </div>
+
+            
+
+            <div class="box">
+                <h3>швидкі посилання</h3>
+                <a href="#">головна</a>
+                <a href="#">продукція</a>
+                <a href="#">рекомендовані товари</a>
+                <a href="#">контакти</a>
+            </div>
+
+            <div class="box">
+                <h3>покликання на соц-мережу</h3>
+                
+                <a href="https://www.instagram.com/vlad_0208vvv/"> <i class="fab fa-instagram"></i> instagram</a>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="credit">
+        &copy; TechnoShop © 2025. Усі права захищено
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
