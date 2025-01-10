@@ -67,3 +67,83 @@ var swiper = new Swiper(".featured-slider", {
         },
     },
 });
+document.getElementById('language-select').addEventListener('change', function() {
+    const lang = this.value;
+    document.querySelectorAll('[data-lang-key]').forEach(el => {
+        const key = el.getAttribute('data-lang-key');
+        el.innerText = translations[lang][key];
+    });});
+    const translations = {
+        en: {
+            title: "TechnoMax",
+            home: "Home",
+            products: "Products",
+            rec_products: "Recommended products",
+            contact: "Contact",
+           
+            action: "New holiday promotion",
+            action2: "SUPER DISCOUNT",
+            asus:"Asus Vivobook Go 15 is a light and stylish laptop with a 15.6-inch display that provides a clear image. equipped with a modern processor that guarantees fast and stable performance, it is suitable for study, work and entertainment. thanks to the ergonomic keyboard and long battery life, the device is convenient for everyday use",
+            playst:"PlayStation 5 (PS5) is a modern game console from Sony, released in 2020. It provides powerful graphics thanks to ray tracing technology, support for 4K resolution, fast loading thanks to SSD storage, as well as an innovative DualSense gamepad with adaptive triggers and tactile feedback",
+            buy:"Buy now",
+            last:"Latest products",
+            planshet:"Tablet Lenovo Tab P12",
+             phone:"Smartphone Xiaomi Redmi Note 13 8/256Gb Midnight Black",
+             drone:"Quadcopter DJI Mini 3 Pro + remote control DJI RC",
+             notebook:"Laptop Dell XPS 13",
+             pk:"Gaming PC ASUS ROG Strix G15",
+             moni:"Monitor LG UltraGear 27GN950",
+             rec:"Recommended products",
+             clava:"Mechanical keyboard Razer BlackWidow V3 Pro",
+             cart:"Add to cart",
+             mouse:"Mouse Logitech MX Master 3",
+             proc:"Processor Intel Core i9-13900K",
+             videocard:"Video card NVIDIA GeForce RTX 4080",
+             ssd:"SSD Samsung 980 PRO 2TB",
+             nau:"Headphone HyperX Cloud Alpha Wireless",
+             get:"Contact us",
+             fill:"Fill in",
+             about:"About us",
+             techno:"TechnoShop is your reliable partner in the world of modern technologies. We offer a wide selection of computer equipment, gadgets and accessories from leading manufacturers. Our values ​​are quality, availability and customer orientation",
+             pos:"Quick calls",
+             posu:"Call to the social network",
+             footer:"TechnoShop © 2025. All rights reserved",
+             
+        },
+            
+           
+        uk: {
+            title: "TechnoMax",
+            home: "Головна",
+            products: "Продукція",
+            contact: "Контакти",
+            rec_products: "Рекомендовані товари",
+            action: "Нова святкова акція",
+            action2:"СУПЕР ЗНИЖКА",
+            asus:"Asus Vivobook Go 15-це легкий та стильний ноутбук із 15.6-дюймовим дисплеєм, що забезпечує чітке зображення. оснащений сучасним процесором, який гарантує швидку та стабільну роботу, він підходить для навчання, роботи й розваг. завдяки ергономічній клавіатурі та тривалому часу автономної роботи, пристрій зручний в повсякденному використанні",
+            playst:"PlayStation 5 (PS5) — це сучасна ігрова консоль від Sony, випущена в 2020 році. Вона забезпечує потужну графіку завдяки технології трасування променів, підтримку 4K-роздільної здатності, швидке завантаження завдяки SSD-накопичувачу, також інноваційний геймпад DualSense з адаптивними тригерами й тактильною віддачею",
+            buy:"Придбати",
+        last:"Остання продукція",
+        planshet:"Планшет Lenovo Tab P12",
+        phone:"Смартфон Xiaomi Redmi Note 13 8/256Gb Midnight Black",
+        drone:"Квадрокоптер DJI Mini 3 Pro + пульт DJI RC",
+        notebook:"Ноутбук Dell XPS 13",
+        pk:"Ігровий ПК ASUS ROG Strix G15",
+        moni:"Монітор LG UltraGear 27GN950",
+        rec:"Рекомендовані товари",
+        clava:"Механічна клавіатура Razer BlackWidow V3 Pro",
+       cart:"Додати до кошика",
+       mouse:"Миша Logitech MX Master 3",
+       proc:"Процесор Intel Core i9-13900K",
+       videocard:"Відеокарта NVIDIA GeForce RTX 4080",
+       ssd:"SSD Samsung 980 PRO 2TB",
+       nau:"Навушники HyperX Cloud Alpha Wireless",
+       get:"Зв'яжіться з нами",
+       fill:"Заповніть",
+       about:"Про нас",
+       techno:"TechnoShop — це ваш надійний партнер у світі сучасних технологій. Ми пропонуємо широкий вибір комп’ютерної техніки, гаджетів та аксесуарів від провідних виробників. Наші цінності — якість, доступність та клієнтоорієнтованість",
+       pos:"Швидкі покликання",
+       posu:"Покликання на соц-мережу",
+       footer:"TechnoShop © 2025. Усі права захищено",
+        }
+    };
