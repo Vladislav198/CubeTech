@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CubeTech</title>
-    <!-- font awesome cdn link  -->
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- swiper js cdn -->
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <!-- custom css file link  -->
+   
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <!-- header section starts -->
+    
 
     <header class="header">
 
@@ -33,7 +33,7 @@
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
-            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="#" id="cart-btn" class="fas fa-shopping-cart"></a>
             <a href="#" class="fas fa-heart"></a>
         </div>
 
@@ -41,13 +41,23 @@
             <input type="search" name="" id="search-box" placeholder="search here...">
             <label class="fas fa-search"></label>
         </form>
+        
+        <div id="cart-modal" class="cart-modal">
+            <div class="cart-modal-content">
+                <span id="close-cart-modal" class="close">&times;</span>
+                <h2>Ваш кошик</h2>
+                <div id="cart-items"></div>
+                <div class="cart-footer">
+                    <p id="total-price">Загальна сума: 0 ₴</p>
+                    <button id="checkout-button" class="btn">Оформити замовлення</button>
+                </div>
+            </div>
+        </div>
+
 
     </header>
 
-    <!-- header section ends -->
-
-    <!-- home section starts -->
-
+   
     <section class="home" id="home">
 
         <div class="slides-container">
@@ -169,6 +179,7 @@
                         
                         <span>(40)</span>
                     </div>
+                    
                     <a href="#" class="btn"> <i class="far fa-heart"></i></a>
                 </div>
             </div>
@@ -218,18 +229,17 @@
     
 
     <section class="featured" id="featured">
-
         <h1 class="heading" data-lang-key="rec"><span>Рекомендовані    </span>товари </h1>
-
         <div class="swiper featured-slider">
-
             <div class="swiper-wrapper">
-
-                <div class="swiper-slide slide">
-                    <span class="discount">-25%</span>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <span class="discount">-25%</span>
+                   
                     <div class="image">
                         <img src="images/recproduct1.png" alt="">
                     </div>
+                   
                     <div class="content">
                         <h3 data-lang-key="clava">Механічна клавіатура Razer BlackWidow V3 Pro</h3>
                         <div class="price">6 500 ₴</div>
@@ -244,64 +254,85 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide slide">
-                    <span class="discount">-50%</span>
-                    <div class="image">
-                        <img src="images/recproduct2.png" alt="">
                     </div>
-                    <div class="content">
-                        <h3 data-lang-key="mouse">Миша Logitech MX Master 3</h3>
-                        <div class="price">200 ₴</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                
+
+                        <div class="swiper-slide">
+                            <div class="box">
+                                <span class="discount">-50%</span>
+                                <div class="image">
+                                    <img src="images/recproduct2.png" alt="">
+                                </div>
+                                <div class="content">
+                                    <h3 data-lang-key="mouse">Миша Logitech MX Master 3</h3>
+                                    <div class="price">200 ₴</div>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        
+                                    </div>
+                                    <a href="#" class="btn" data-lang-key="cart">Додати до кошика</a>
+                                </div>
+                            </div>
+            
+                            </div>
+                       
+                    
+                      
+                                <div class="swiper-slide">
+                                    <div class="box">
+                                        <div class="image">
+                                            <img src="images/recproduct3.png" alt="">
+                                        </div>
+                                        <div class="content">
+                                            <h3 data-lang-key="proc">Процесор Intel Core i9-13900K</h3>
+                                            <div class="price">28 000 ₴</div>
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <a href="#" class="btn" data-lang-key="cart">Додати до кошика</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                
+                    
+                  
+                    
+
+                                
+                                    
+                                        <div class="swiper-slide">
+                                            <div class="box">
+                                                <div class="image">
+                                                    <img src="images/recproduct4.png" alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h3 data-lang-key="videocard" >Відеокарта NVIDIA GeForce RTX 4080</h3>
+                                                    <div class="price">48 000 ₴</div>
+                                                    <div class="stars">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <a href="#" class="btn" data-lang-key="cart">Додати до кошика</a>
+                                                </div>
+                                            </div>
                             
-                        </div>
-                        <a href="#" class="btn" data-lang-key="cart">Додати до кошика</a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide slide">
+                                            </div>
+                                      
                     
-                    <div class="image">
-                        <img src="images/recproduct3.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 data-lang-key="proc">Процесор Intel Core i9-13900K</h3>
-                        <div class="price">28 000 ₴</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <a href="#" class="btn" data-lang-key="cart">Додати до кошика</a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide slide">
-                    
-                    <div class="image">
-                        <img src="images/recproduct4.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3 data-lang-key="videocard" >Відеокарта NVIDIA GeForce RTX 4080</h3>
-                        <div class="price">48 000 ₴</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <a href="#" class="btn" data-lang-key="cart">Додати до кошика</a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide slide">
-                    <span class="discount">-25%</span>
+                   
+                                        
+                                                <div class="swiper-slide">
+                                                    <div class="box">
+                                                        <span class="discount">-25%</span>
                     <div class="image">
                         <img src="images/recproduct5.png" alt="">
                     </div>
@@ -318,9 +349,14 @@
                         <a href="#" class="btn" data-lang-key="cart">Додати до кошика</a>
                     </div>
                 </div>
+             </div>
+         
+         
+                
 
-                <div class="swiper-slide slide">
-                    <span class="discount">-20%</span>
+                <div class="swiper-slide">
+                    <div class="box">
+                        <span class="discount">-20%</span>
                     <div class="image">
                         <img src="images/recproduct6.png" alt="">
                     </div>
@@ -339,15 +375,22 @@
                 </div>
 
             </div>
-
-            <div class="swiper-button-prev"></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+                
+                </div>
+                   
 
-        </div>
+   
+        
 
     </section>
+                    
 
-    <!-- featured product section ends -->
+    
+
+   
 
     
 
@@ -382,10 +425,7 @@
 
     </section>
 
-    <!-- contact section ends -->
-
-    <!-- footer section starts -->
-
+   
     <section class="footer">
 
         <div class="box-container">

@@ -67,6 +67,106 @@ var swiper = new Swiper(".featured-slider", {
         },
     },
 });
+
+
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+
+const cartModal = document.getElementById('cart-modal');
+const cartItemsContainer = document.getElementById('cart-items');
+const totalPriceElement = document.getElementById('total-price');
+const cartButton = document.getElementById('cart-btn');
+const closeCartModal = document.getElementById('close-cart-modal');
+const checkoutButton = document.getElementById('checkout-button');
+
+
+function updateCartUI() {
+    cartItemsContainer.innerHTML = ''; 
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Корзина порожня</p>';
+        totalPriceElement.innerText = 'Загальна сума: 0 ₴';
+        return;
+    }
+
+    let total = 0;
+    cart.forEach((item, index) => {
+        const itemRow = document.createElement('div');
+        itemRow.classList.add('cart-item');
+        itemRow.innerHTML = `
+            <p>${item.name} - ${item.quantity} x ${item.price} ₴</p>
+            <button class="btn remove-btn" data-index="${index}">Видалити</button>
+        `;
+        cartItemsContainer.appendChild(itemRow);
+        total += item.quantity * item.price;
+    });
+
+    totalPriceElement.innerText = `Загальна сума: ${total} ₴`;
+
+    
+    document.querySelectorAll('.remove-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            const index = e.target.dataset.index;
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartUI();
+        });
+    });
+}
+
+
+cartButton.addEventListener('click', () => {
+    updateCartUI();
+    cartModal.style.display = 'flex';
+});
+
+
+closeCartModal.addEventListener('click', () => {
+    cartModal.style.display = 'none';
+});
+
+
+document.querySelectorAll('.btn[data-lang-key="cart"]').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        const productCard = e.target.closest('.box');
+        if (!productCard) {
+            console.error('Не знайдено елемент товару');
+            return;
+        }
+
+        const productName = productCard.querySelector('h3')?.innerText || "Без назви";
+        const productPrice = parseFloat(
+            productCard.querySelector('.price')?.innerText.replace(/[^\d]/g, '') || 0
+        );
+
+        const existingProduct = cart.find((item) => item.name === productName);
+        if (existingProduct) {
+            existingProduct.quantity++;
+        } else {
+            cart.push({ name: productName, price: productPrice, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${productName} додано до кошика!`);
+    });
+});
+
+
+checkoutButton.addEventListener('click', () => {
+    if (cart.length === 0) {
+        alert('Корзина порожня. Додайте товари!');
+        return;
+    }
+
+    alert('Дякуємо за ваше замовлення!');
+    cart.length = 0;
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartUI();
+});
+
+
+
+
+
 document.getElementById('language-select').addEventListener('change', function() {
     const lang = this.value;
     document.querySelectorAll('[data-lang-key]').forEach(el => {

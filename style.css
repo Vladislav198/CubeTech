@@ -63,7 +63,6 @@ section{
 }
 
 
-/* header */
 
 .header{
     width: 96%;
@@ -290,21 +289,21 @@ section{
     flex-direction: column;
     justify-content: space-between;
     width: 30rem;
-    height: auto; /* Забезпечує автоматичну висоту */
+    height: auto; 
 }
 
 .products .box-container .box .image {
     width: 100%;
-    height: auto; /* Висота змінюється залежно від пропорцій зображення */
+    height: auto; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .products .box-container .box .image img {
-    width: 200px; /* Ширина контейнера */
-    height: 200px; /* Висота контейнера */
-    overflow: hidden; /* Прибирає частини зображення, що виходять за межі */
+    width: 200px; 
+    height: 200px; 
+    overflow: hidden; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -338,7 +337,7 @@ section{
 }
 
 .products .box-container .box .content .stars i {
-    color: gold;
+    color: rgb(0, 0, 0);
 }
 
 .products .box-container .box .content .stars span {
@@ -381,6 +380,7 @@ section{
     border-radius: .5rem;
 }
 
+
 .featured .featured-slider .slide .image{
     width: 100%;
     overflow: hidden;
@@ -388,8 +388,8 @@ section{
 
 .featured .featured-slider .slide .image img{
     width: 100%;
-    height: auto; /* Пропорційне масштабування */
-    object-fit: cover; /* Заповнює контейнер, зберігаючи пропорції */
+    height: auto;
+    object-fit: cover; 
 }
 
 .featured .featured-slider .slide .content{
@@ -445,7 +445,6 @@ section{
     font-size: 1.5rem;
 }
 
-/* end */
 
 
 
@@ -511,9 +510,6 @@ section{
     width: 100%;
 }
 
-/* end */
-
-/* footer */
 
 .footer{
     background: #f4fffa;
@@ -561,32 +557,6 @@ section{
     font-size: 2rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* media query */
 
 @media(max-width: 991px){
     html{
