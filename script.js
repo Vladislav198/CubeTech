@@ -204,10 +204,10 @@ document.getElementById('language-select').addEventListener('change', function()
              get:"Contact us",
              fill:"Fill in",
              about:"About us",
-             techno:"TechnoShop is your reliable partner in the world of modern technologies. We offer a wide selection of computer equipment, gadgets and accessories from leading manufacturers. Our values ​​are quality, availability and customer orientation",
+             techno:"CubeTech is your reliable partner in the world of modern technologies. We offer a wide selection of computer equipment, gadgets and accessories from leading manufacturers. Our values ​​are quality, availability and customer orientation",
              pos:"Quick calls",
              posu:"Call to the social network",
-             footer:"TechnoShop © 2025. All rights reserved",
+             footer:"CubeTech © 2025. All rights reserved",
              
         },
             
@@ -241,9 +241,9 @@ document.getElementById('language-select').addEventListener('change', function()
        get:"Зв'яжіться з нами",
        fill:"Заповніть",
        about:"Про нас",
-       techno:"TechnoShop — це ваш надійний партнер у світі сучасних технологій. Ми пропонуємо широкий вибір комп’ютерної техніки, гаджетів та аксесуарів від провідних виробників. Наші цінності — якість, доступність та клієнтоорієнтованість",
+       techno:"CubeTech — це ваш надійний партнер у світі сучасних технологій. Ми пропонуємо широкий вибір комп’ютерної техніки, гаджетів та аксесуарів від провідних виробників. Наші цінності — якість, доступність та клієнтоорієнтованість",
        pos:"Швидкі покликання",
        posu:"Покликання на соц-мережу",
-       footer:"TechnoShop © 2025. Усі права захищено",
+       footer:"CubeTech © 2025. Усі права захищено",
         }
     };
